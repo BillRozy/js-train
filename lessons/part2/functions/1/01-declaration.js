@@ -14,7 +14,7 @@ console.log(typeof generateWelcomeMessage) // function
 console.log(typeof generateWelcomeMessage()) // string
 
 // Вариант 2
-const generateStupidArray = function () {
+let generateStupidArray = function () {
   return ['something', 'stupid', generateWelcomeMessage]
 }
 
@@ -25,3 +25,11 @@ console.log(generateStupidArray())
 console.log(generateStupidArray instanceof Function) // function
 console.log(generateStupidArray() instanceof Array) // string
 console.log(generateStupidArray()[2] instanceof Function) // string
+
+// Присвоение другой переменной
+
+let iWantOtherNameForFunc = generateStupidArray
+generateStupidArray = null
+
+console.log(iWantOtherNameForFunc())
+console.log(generateStupidArray())
