@@ -72,3 +72,16 @@ console.log(customPow(2, 6))
 const customPowRenamed2 = customPow2
 customPow2 = null
 console.log(customPowRenamed2(2, 6))
+
+// Вложенные функции
+
+function sayHiBye (firstName, lastName) {
+  console.log('Привет, ' + getFullName())
+  console.log('Пока, ' + getFullName())
+
+  function getFullName () {
+    return firstName + ' ' + lastName
+  }
+}
+
+sayHiBye('Вася', 'Пупкин') // Привет, Вася Пупкин ; Пока, Вася Пупкин
