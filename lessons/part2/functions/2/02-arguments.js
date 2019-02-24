@@ -34,6 +34,7 @@ function createFullNameInQuiteStupidManner (name, surname) {
 console.log(createFullNameInQuiteStupidManner(lilName, lilSurname))
 console.log(lilName) // не изменилось!
 
+// параметры по умолчанию
 function maxWithDefault (first, second = -Infinity) {
   return first > second ? first : second
 }
